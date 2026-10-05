@@ -47,7 +47,7 @@ measure the runtime and enter it into the table.
 |                | `sequential_search_itr`   | `binary_search_rec`   |
 | -------------- | ------------------------- | --------------------- |
 | `n=2**0`       |   89.8 nsec               |   532 nsec            |
-| `n=2**1`       |   117 nsec                |   648 nse             |
+| `n=2**1`       |   117 nsec                |   648 nsec            |
 | `n=2**2`       |   168 nsec                |   777 nsec            |
 | `n=2**3`       |   259 nsec                |   704 nsec            |
 | `n=2**4`       |   377 nsec                |   810 nsec            |
@@ -302,12 +302,12 @@ If you get a stack overflow, then put `---` in the table.
 
 |                            | `array`  | `list`  | `tuple`     | `deque`       |
 | -------------------------- | ---------| --------|------------ | ------------- |
-| `sequential_search_itr`    |          |         |             |               |
-| `sequential_search_itr2`   |          |         |             |               |
-| `sequential_search_rec`    |          |         |             |               |
-| `binary_search_itr`        |          |         |             |               |
-| `binary_search_rec`        |          |         |             |               |
-| `binary_search_rec2`       |          |         |             |               |
+| `sequential_search_itr`    |4.65 msec |945 usec |949 usec     |1.01 msec              |
+| `sequential_search_itr2`   |7.3 msec  |2.12 msec|2.17 msec    |106 msec               |
+| `sequential_search_rec`    | ---      | ---     | ---         | ---            |
+| `binary_search_itr`        |6.45 usec |1.8 usec |1.82 usec    |169 usec               |
+| `binary_search_rec`        |7.11 usec |2.68 usec|2.66 usec    |168 usec               |
+| `binary_search_rec2`       |6.02 usec |392 usec |407 usec     | ---              |
 
 You should notice that:
 1. for the `array` container, all implementations of binary search work well
